@@ -25,21 +25,40 @@ docker network create backend
 Run
 
 ```bash
-docker-compose up -d
+npm run deploy
+```
+
+Or
+
+```bash
+npm run deploy:only
 ```
 
 Note
 
-> There are no exposed port in the docker compose configuration file
+> There are no exposed ports in the docker compose configuration file
 
 ### Via NPM
 
-Go to `src` folder, install dependencies and run
+Run via NPM
 
 ```bash
-cd src
 npm install
-npm run
+npm start
 ```
 
-Reach REST server at `http://localhost:8000/`
+### Rest API
+
+Reach REST server at `http://localhost:8000/` using method `GET`
+
+### Query String
+
+| Field     | Description         |
+| --------- | ------------------- |
+| `message` | The message to send |
+
+Example:
+
+```bash
+    curl -G --data-urlencode 'message=bots are awesome!' http://localhost:8000
+```
