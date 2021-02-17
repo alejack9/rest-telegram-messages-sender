@@ -7,7 +7,7 @@ services:
       - backend
     working_dir: /opt/app
     env_file: env.env
-    command: ['npm', 'start']
+    command: npm run start:docker
 
 networks:
   backend:
