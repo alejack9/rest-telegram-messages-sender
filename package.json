@@ -1,6 +1,6 @@
 {
   "name": "telegram-sender",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Simple REST API to send messages to a specific chat via Telegram Bot",
   "main": "dist/app.js",
   "scripts": {
@@ -38,6 +38,5 @@
     "ts-jest": "^26.5.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.5"
-  },
-  "dependencies": {}
+  }
 }
