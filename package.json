@@ -1,6 +1,6 @@
 {
   "name": "telegram-sender",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "Simple REST API to send messages to a specific chat via Telegram Bot",
   "main": "dist/app.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
+    "version": "npm run format && git add -A .",
     "postversion": "git push && git push --tags",
     "start": "node dist/app.js",
     "start:docker": "node app.js",
