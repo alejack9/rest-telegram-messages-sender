@@ -13,9 +13,11 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
-    "start": "node app.js",
+    "start": "node dist/app.js",
+    "start:docker": "node app.js",
     "start:dev": "nodemon",
-    "deploy": "npm run build && docker-compose build && docker-compose up -d"
+    "deploy": "npm run build && docker-compose build && docker-compose up -d",
+    "deploy:only": "docker-compose up -d"
   },
   "author": "Alessandro Giacchè",
   "license": "BSD-3-Clause",
