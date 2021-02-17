@@ -10,13 +10,13 @@ let telegram: TelegramSender;
 
 function httpGet(req: IncomingMessage, res: ServerResponse) {
   if (!req.url?.split('?')[1]) {
-    res.writeHead(400);
+    res.writeHead(400, 'No Message Parameter');
     return res.end();
   }
   const urlParams = new URLSearchParams(req.url.split('?')[1]);
   const message = urlParams.get('message');
   if (!message) {
-    res.writeHead(400);
+    res.writeHead(400, 'Empty Message');
     return res.end();
   }
   telegram.sendMessage(clientId, message);
