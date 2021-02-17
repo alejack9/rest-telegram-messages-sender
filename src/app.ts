@@ -3,7 +3,7 @@ import { exit } from 'process';
 import TelegramSender from './libs/telegram-sender';
 
 const token = process.env.BOT_TOKEN || '';
-const clientId = process.env.CLIENT_ID || '';
+const clientId = process.env.CHAT_ID || '';
 const port = process.env.PORT || 8000;
 
 let telegram: TelegramSender;

@@ -4,6 +4,10 @@
 
 Simple REST API to send a message to a specific chat via Telegram Bot
 
+Hint:
+
+> You can get your telegram chat id using [@userinfobot](https://telegram.me/userinfobot) ([https://github.com/nadam/userinfobot](https://github.com/nadam/userinfobot)).
+
 ## Run
 
 ### Environment Variables
@@ -11,7 +15,7 @@ Simple REST API to send a message to a specific chat via Telegram Bot
 | Variable    | Description                          |
 | ----------- | ------------------------------------ |
 | `BOT_TOKEN` | Token that identifies the Bot        |
-| `CLIENT_ID` | Id of user which send the message to |
+| `CHAT_ID`   | Id of user which send the message to |
 | `PORT`      | API port number                      |
 
 ### Via Docker
