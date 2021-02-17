@@ -15,13 +15,13 @@ function boot(start) {
     }
     createServer({}, (req, res) => {
         if (!req.url.split("?")[1]) {
-            res.writeHead(401);
+            res.writeHead(400);
             return res.end();
         }
         const urlParams = new URLSearchParams(req.url.split("?")[1]);
         const message = urlParams.get("message");
         if (!message) {
-            res.writeHead(401);
+            res.writeHead(400);
             return res.end();
         }
         get(
