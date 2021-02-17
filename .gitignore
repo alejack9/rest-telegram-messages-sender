@@ -2,4 +2,5 @@
 
 env.env
 
-src/node_modules
+node_modules
+dist

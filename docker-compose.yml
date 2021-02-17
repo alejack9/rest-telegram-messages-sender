@@ -1,10 +1,15 @@
-version: "3"
+version: '3'
 services:
-    telegram-sender:
-        container_name: "telegram-sender-node"
-        build: .
-        volumes:
-            - ./src:/opt/app
-        working_dir: /opt/app
-        env_file: env.env
-        command: npm start
+  telegram-sender:
+    container_name: 'telegram-sender-nodejs'
+    build: .
+    networks:
+      - backend
+    working_dir: /opt/app
+    env_file: env.env
+    command: ['npm', 'start']
+
+networks:
+  backend:
+    external:
+      name: backend

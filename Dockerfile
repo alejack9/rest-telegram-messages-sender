@@ -4,6 +4,10 @@ RUN npm update -g
 
 WORKDIR /opt/app
 
-COPY ./src/package*.json ./
+COPY ./package*.json ./
 
-RUN npm install
+ENV NODE_ENV=production
+
+RUN npm ci
+
+COPY ./dist/ ./
